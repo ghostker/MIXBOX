@@ -18,7 +18,7 @@ read answer
 #check root
 # [ "$USER" != "root" ] && logsh "【Tools】"  "请使用root用户安装工具箱！" && exit 1
 mburl="https://monlor.coding.net/p/mbfiles/d/mbfiles/git/raw/master"
-mbtmp="/tmp/mbtmp"
+mbtmp="/extdisks/sda1/plugin/mbtmp"
 [ ! -d "${mbtmp}" ] && mkdir -p ${mbtmp}
 model=$(uname -ms | tr ' ' '_' | tr '[A-Z]' '[a-z]')
 [ -n "$(echo $model | grep -E "linux.*arm.*")" ] && model="linux_arm"
